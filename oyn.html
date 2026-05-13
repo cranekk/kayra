@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Oyun Sayfası</title>
+</head>
+<body>
+
+    <h1>Oyun Başladı!</h1>
+    <p>1 ile 10 arasında bir sayı tahmin et:</p>
+
+    <input type="number" id="tahmin">
+    <button onclick="oyna()">Tahmin Et</button>
+
+    <p id="sonuc"></p>
+
+    <br><br>
+    <a href="index.html">Çıkış Yap (Anasayfaya Dön)</a>
+
+    <script>
+        var gizliSayi = 7; // Sabit basit bir sayı tuttuk
+
+        function oyna() {
+            var tahmin = document.getElementById("tahmin").value;
+            var sonucYazisi = document.getElementById("sonuc");
+
+            if (tahmin == gizliSayi) {
+                sonucYazisi.innerText = "Tebrikler! Bildin.";
+            } else {
+                sonucYazisi.innerText = "Yanlış tahmin, tekrar dene.";
+            }
+        }
+    </script>
+
+</body>
+</html>
